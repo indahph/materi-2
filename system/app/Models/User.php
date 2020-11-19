@@ -9,6 +9,6 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    protected $table= 'user';
+    protected $table = 'user';
     use HasFactory, Notifiable;
 }

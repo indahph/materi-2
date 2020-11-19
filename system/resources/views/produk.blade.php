@@ -60,6 +60,35 @@
         </div>
 
         <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-header">
+                 Filter
+              </div>
+              <div class="col-md-12">
+                <form action="{{url('produk')}}" method="post"">
+                  @csrf
+                  <div class="form-group">
+                    <label for="" class="control-label">Nama</label>
+                    <input type="text" class="form-control" name="nama" value="{{$nama ?? ""}}">
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="control-label">Stok</label>
+                    <input type="text" class="form-control" name="stok" value="{{$stok ?? ""}}">
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="control-label">Harga Min</label>
+                    <input type="text" class="form-control" name="harga_min" value="{{$harga_min ?? ""}}">
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="control-label">Harga Max </label>
+                    <input type="text" class="form-control" name="harga_max" value="{{$harga_max ?? ""}}">
+                  </div>
+                  <button class="btn btn-warning float-right"> <i class="fa fa-search"></i> Filter</button>
+                </form>
+              </div>
+            </div>
+          </div>
           @foreach($list_produk as $produk)
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
@@ -70,7 +99,7 @@
               </div>
               <div class="member-info">
                 <h4>{{$produk->nama}}</h4>
-                <span>{{number_format($produk->harga)}}</span>
+                <span> Rp.{{number_format($produk->harga)}}</span>
                 </a>
               </div>
             </div>

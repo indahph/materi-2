@@ -22,7 +22,6 @@
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          
           Indah Putri Hartanti
           <img src="{{ url ('public')}}/dist/img/pp.jpg" class="img-circle elevation-2" style="height: 100%" alt="User Image">
         </a>

@@ -21,7 +21,7 @@
         </div>
         <div class="info">
           <a href="{{ url('admin/beranda')}}" class="d-block">
-           Indah Putri Hartanti 
+         Indah Putri Hartanti
           </a>
         </div>
       </div>
