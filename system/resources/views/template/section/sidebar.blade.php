@@ -1,5 +1,5 @@
  @php
- function checkRouteActive($route){
+ function checkRouteActive($route){ 
  if(Route::current()->uri == $route) return 'active';
 }
 @endphp
@@ -21,7 +21,11 @@
         </div>
         <div class="info">
           <a href="{{ url('admin/beranda')}}" class="d-block">
-         Indah Putri Hartanti
+         @if(Auth::check())
+              {{request()->user()->nama}}
+            @else
+              Silahkan Login
+            @endif
           </a>
         </div>
       </div>

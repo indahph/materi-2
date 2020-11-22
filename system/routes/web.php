@@ -71,7 +71,7 @@ Route::put('user/{user}' , [UserController::class, 'update']);
 Route::delete('user/{user}' , [UserController::class, 'destroy']);
 
 Route::get('admin/login' , [AuthController::class, 'showAdminLogin']);
-Route::post('admin/login' , [AuthController::class, 'loginProcess']);
+Route::post('admin/login' , [AuthController::class, 'loginProsess']);
 Route::get('admin/logout' , [AuthController::class, 'logout']);
 
 Route::get('admin/registrasi' , [AuthController::class, 'showRegistrasi']);

@@ -29,7 +29,7 @@
       <p class="login-box-msg">Sign in to start your session</p>
 
        @include('template.utils.notif')
-      <form action='login' method="post">
+      <form action="login" method="post">
         @csrf
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email" name="email">

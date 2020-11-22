@@ -6,7 +6,7 @@
 			<div class="col-md-12 mt-5">
 				<div class="card">
 					<div class="card-header">
-						Tambah Kategori Merk Laptop                                            
+						Tambah Kategori Merk Motor                                         
 					</div>
 					<div class="card-body">
 						<form action="{{url('admin/kategori')}}" method="post">

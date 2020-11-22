@@ -5,7 +5,7 @@ use\App\Models\User;
 
 class UserController extends Controller {
 	function index(){
-		$data['list_user'] = User::all();
+		$data['list_user'] = User::withCount('produk')->get();
 		return view('admin/user.index', $data);
 	}
 
@@ -19,6 +19,11 @@ class UserController extends Controller {
 		$user->email = request ('email');
 		$user->password = bcrypt(request ('password'));
 		$user->save();
+
+		$userDetail = new UserDetail;
+		$userDetail->id_user = $user->id;
+		$userDetail->no_handphone = request ('no_handphone');
+		$userDetail-> save();
 
 		return redirect('admin/user')->with('success', 'Data Berhasil Ditambahkan');
 	}
